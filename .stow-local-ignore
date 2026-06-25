@@ -6,3 +6,5 @@ firefox
 
 ^/README.*
 ^/LICENSE.*
+
+bootstrap.sh
