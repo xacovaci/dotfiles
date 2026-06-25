@@ -1,8 +1,35 @@
 !! Transparency (0-1):
-/* *.alpha: 0.8 */
+*.alpha: 0.8
 
 !! Set a default font and font size as below:
-/* *.font: HackNerdFont:size=20 */
+*.font:   HackNerdFont:size=12
+st.font:  HackNerdFont:size=20 
+
+/* !! customized dwm solarized */
+dwm.normbordercolor:  #586e75  
+dwm.normfgcolor:      #eee8d5
+dwm.selbgcolor:       #073642
+dwm.selbordercolor:   #073642
+dwm.selfgcolor:       #fdf6e3
+
+/* !! customized solarized */
+*.color0:   #073642
+*.color1:	  #dc322f
+*.color2:	  #859900
+*.color3:	  #b58900
+*.color4:	  #268bd2
+*.color5:	  #d33682
+*.color6:	  #2aa198
+*.color7:	  #eee8d5
+*.color8:	  #fdf6e3
+*.color9:	  #cb4b16
+*.color10:	#586e75
+*.color11:	#657b83
+*.color12:	#839496
+*.color13:	#6c71c4
+*.color14:	#93a1a1
+*.color15:	#fdf6e3
+
 
 /* name		dark	light */
 /* black	0	8 */

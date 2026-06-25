@@ -31,3 +31,8 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # ------- end -------
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/moe/.lmstudio/bin"
+# End of LM Studio CLI section
+

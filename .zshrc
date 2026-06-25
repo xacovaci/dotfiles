@@ -1,5 +1,8 @@
 bindkey -v
 
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 source ~/.profile
 
 # version control status prompt
@@ -23,4 +26,9 @@ autoload -U colors && colors
 PROMPT="%B%{$fg[blue]%}%~%{$fg[magenta]%}"
 PROMPT+='${vcs_info_msg_0_}'
 PROMPT+=" %{$fg[green]%}λ%b "
+
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/moe/.lmstudio/bin"
+# End of LM Studio CLI section
 

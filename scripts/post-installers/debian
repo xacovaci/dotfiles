@@ -4,24 +4,24 @@ sudo apt upgrade
 
 # Installing Packages:
 # essential tools
-sudo apt install curl wget build-essential make cmake ninja-build git tig gh stow zsh fzf tree ripgrep gettext tmux htop lsd
+sudo apt install fastfetch curl wget build-essential make cmake ninja-build git tig gh stow zsh fzf tree ripgrep gettext tmux htop lsd zsh-autosuggestions zsh-syntax-highlighting
 
-# required for building suckless apps
-sudo apt install libx11-dev libxft-dev libxinerama-dev libxext-dev 
+# Sway suit for Wayland + Kitty Terminal
+sudo apt install sway swaybg swayidle swaylock wl-clipboard waybar kitty rofi
+
+# Wayland compatibility layer for X
+sudo apt install xwayland
 
 # user apps
-sudo apt install chromium ranger pcmanfm vlc eog evince okular telegram-desktop keepassxc
+sudo apt install chromium ranger pcmanfm vlc eog evince okular keepassxc
 
 # installing librewolf
 sudo apt update && sudo apt install extrepo -y
 sudo extrepo enable librewolf
 sudo apt update && sudo apt install librewolf -y
 
-# window manager tools
-sudo apt install picom feh arandr lxappearance
-
 # archival tools
-sudo apt install tar zip unzip p7zip-full
+sudo apt install tar zip unzip p7zip-full unrar xarchiver
 
 # dev tools
 sudo apt install python3 python3-pip python3-venv nodejs npm
@@ -49,15 +49,11 @@ cd ~
 fc-cache -fv
 # note: remember to execute `fc-cache -fv` after applying font configs
 
-
-# if core minimal debian is installed:
-# display server and display related stuff
-sudo apt install xorg xclip xsel fontconfig gnome-themes-extra
-
 # audio servers and enabling them
-sudo apt install pipewire pipewire-alsa pipewire-audio wireplumber
-systemctl --user enable pipewire pipewire.socket wireplumber
-systemctl --user start pipewire pipewire.socket wireplumber
+sudo apt install pipewire pipewire-pulse pipewire-audio-client-libraries libspa-0.2-bluetooth libspa-0.2-jack gstreamer1.0-pipewire
+
+# efficient power management (tlp, etc.)
+sudo apt install tlp tlp-rdw
 
 # firewall and its configuration
 sudo apt install ufw
@@ -65,9 +61,21 @@ sudo apt install ufw
 # firewall rules
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
-sudo ufw allow in on tun0  # For VPN tunnel interface (OpenVPN)
-sudo ufw allow in on wg0   # For WireGaurd
 
 # activate firewall
 sudo ufw enable
 
+
+
+
+# Depricated XD (I don't use it anymore!)
+# required for building suckless apps
+sudo apt install libx11-dev libxft-dev libxinerama-dev libxext-dev libxrandr-dev 
+sudo apt install libfribidi-dev # only for bidi patch in dwm
+
+# window manager tools (for DWM)
+sudo apt install picom feh arandr lxappearance brightnessctl maim
+
+# if core minimal debian is installed:
+# display server and display related stuff
+sudo apt install xorg xclip xsel fontconfig gnome-themes-extra

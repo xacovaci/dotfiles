@@ -1,0 +1,6 @@
+sudo apt install xdg-desktop-portal xdg-desktop-portal-gtk
+
+systemctl --user import-environment DISPLAY XAUTHORITY
+systemctl --user daemon-reload
+systemctl --user restart xdg-desktop-portal xdg-desktop-portal-gtk
+

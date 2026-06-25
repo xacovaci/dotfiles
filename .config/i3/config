@@ -44,7 +44,7 @@ bindsym $mod+Ctrl+4 exec "~/scripts/screen/external-monitor-right.sh"
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec "alacritty"
+bindsym $mod+Return exec "kitty"
 
 # some apps to run keymaps
 bindsym $mod+b exec "firefox"
